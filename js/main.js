@@ -60,7 +60,8 @@ window.onload = function () {
     //
 
     let world = document.querySelector('a-scene').systems['physics'].world;
-    let groundMaterial = document.querySelectorAll(['static-body]'])[0].material;
+    let groundMaterial = document.querySelectorAll('static-body')[0];
+  console.log(groundMaterial)
     let laneObjects = document.querySelectorAll(['static-body']);
     for (let i = 0; i < laneObjects.length; i++) {
         laneObjects[i].body.material = groundMaterial;
