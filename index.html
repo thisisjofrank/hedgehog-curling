@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Hedgehog Curling</title>
-    <link id="favicon" re        <a-box id="box1" color="#aaa" width="0.25" height="0.2" depth="45" position="-4 0 -20l="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,13 +10,13 @@
 		<script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
   </head>
   <body>
-    <a-assets>
-        <img id="sky" src="https://cdn.glitch.com/f0c6155e-5ef1-40bc-83c2-279adb0294b6%2Fsky.png?1512123183987" crossorigin="anonymous" />
-      <a-asset id="hedgehog" src="https://github.com/poshaughnessy/hedgehog-tests/blob/master/models/hedgehog1/Mesh_Hedgehog.obj"></a-asset>
-      <a-asset id="hedgehog-skin" src="https://github.com/poshaughnessy/hedgehog-tests/blob/master/models/hedgehog1/Mesh_Hedgehog.mtl"></a-asset>
-
-    </a-assets>
+    
     <a-scene>
+      <a-assets>
+      <img id="sky" src="https://cdn.glitch.com/f0c6155e-5ef1-40bc-83c2-279adb0294b6%2Fsky.png?1512123183987" crossorigin="anonymous" />
+      <a-asset id="hedgehog" src="https://poshaughnessy.github.io/hedgehog-tests/hedgehog1/Mesh_Hedgehog.obj"></a-asset>
+      <a-asset id="hedgehog-skin" src="https://poshaughnessy.github.io/hedgehog-tests/hedgehog1/Mesh_Hedgehog.mtl"></a-asset>
+    </a-assets>
       <a-box color="#aaa" width="0.25" height="0.2" depth="45" position="-3 0 -17.85" static-body></a-box>
       <a-box color="#aaa" width="0.25" height="0.2" depth="45" position="3 0 -17.85" static-body></a-box>
       <a-box color="#aaa" width="6" height="0.2" depth="0.25" position="0 0 4.5" static-body></a-box>
