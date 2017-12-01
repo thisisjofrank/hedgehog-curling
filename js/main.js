@@ -15,9 +15,9 @@ function throwBall(delta) {
 AFRAME.registerComponent('throwing-hand', {
     dependencies: ['dynamic-body', 'vive-controls'],
     init: function () {
-        this.el.addEventListener('triggerdown', function (e) {
+        this.el.addEventListener('e.keyCode == 32', function (e) {
             hasPrepared = true;
-            console.log('triggerdown');
+            console.log('space');
         });
         this.el.addEventListener('triggerup', function (e) {
             if (!hasThrown && hasPrepared) { shallThrow = true};
