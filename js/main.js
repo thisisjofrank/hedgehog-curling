@@ -15,13 +15,13 @@ function throwBall(delta) {
 AFRAME.registerComponent('throwing-hand', {
     dependencies: ['dynamic-body', 'vive-controls'],
     init: function () {
-        this.el.addEventListener('e.keyCode == 32', function (e) {
+        this.el.addEventListener('onmousedown', function (e) {
             hasPrepared = true;
-            console.log('space');
+            console.log('mousedown');
         });
-        this.el.addEventListener('triggerup', function (e) {
+        this.el.addEventListener('onmouseup', function (e) {
             if (!hasThrown && hasPrepared) { shallThrow = true};
-            console.log('triggerup');
+            console.log('mouseup');
         });
         this.el.addEventListener('menuup', function (e) { // restart
             hasThrown = false;
@@ -60,7 +60,7 @@ window.onload = function () {
     //
 
     let world = document.querySelector('a-scene').systems['physics'].world;
-    let groundMaterial = document.querySelector('[static-body]').body.material;
+    let groundMaterial = document.querySelectorAll(['static-body]'])[0].material;
     let laneObjects = document.querySelectorAll(['static-body']);
     for (let i = 0; i < laneObjects.length; i++) {
         laneObjects[i].body.material = groundMaterial;
